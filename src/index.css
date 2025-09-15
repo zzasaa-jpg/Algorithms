@@ -1,0 +1,10 @@
+:root {
+  font-family: monospace;
+  background-color: #333;
+  color: #fff;
+}
+
+body{
+	width: 70%;
+	margin: auto;
+}
