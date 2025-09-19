@@ -96,7 +96,7 @@ span {
 	font-size: 3rem;
 }
 
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 768px) {
 	body {
 		width: auto;
 		margin: 10px;
