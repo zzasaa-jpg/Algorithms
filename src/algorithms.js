@@ -53,6 +53,44 @@ for (auto char_ : string){
 			time_complexity: "o(n)",
 			space_complexity: "o(n)",
 		}
+	},{
+		title: "Binary Search",
+		code: `binary_search(vector<int> vec, int target){
+	left = 0, right = vec.size() - 1;
+
+	while(left <= right){
+		mid = left + ((right - left) / 2);
+
+		if (vec[mid] == target) return true;
+		if (vec[mid] > target) right = mid - 1;
+
+		else left = mid + 1;
+	}
+	return false;
+}`,
+		description: "Binary search algorithm. The algorithm work when receiving parameter of 'vec' is sorted.",
+		complexity: {
+			time_complexity: "o(log n)",
+			space_complexity: "o(1)",
+		}
+	},{
+		title: "Binary Search with Recursion",
+		code: `binary_search_recursive(vector<int> vec, int left, int right, int target){
+	if (left > right) return false;
+
+	int mid = left + ((right - left) / 2);
+
+	if (vec[mid] == target) return true;
+
+	if (vec[mid] > target)return binary_search_recursive(vec, left, mid - 1, target);
+	return binary_search_recursive(vec, mid + 1, right, target);
+
+}`,
+		description: "Binary search algorithm with Recursion. The algorithm work when receiving parameter of 'vec' is sorted.",
+		complexity: {
+			time_complexity: "o(log n)",
+			space_complexity: "o(log n)",
+		}
 	},
 ]
 
