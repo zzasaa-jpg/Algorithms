@@ -1,6 +1,6 @@
 let algorithms_obj = [
 	{
-		title: "Reveese the array in place",
+		title: "Reverse the array in place",
 		code: `value = 1, half_of_array = array.size / 2;
 for (i = 0; i < half_of_array; i++){
 	temp = array[array.size - value];
