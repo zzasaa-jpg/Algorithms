@@ -6,6 +6,6 @@
 - Java script
 
 ## Website main functionality
-Storeing the algorithms.
+Storing the algorithms.
 
 [Website Link](https://algo-rithms.netlify.app/)
