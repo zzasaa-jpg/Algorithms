@@ -91,6 +91,47 @@ for (auto char_ : string){
 			time_complexity: "o(log n)",
 			space_complexity: "o(log n)",
 		}
+	},{
+		title: "Palindrome Number checker from scratch",
+		code: `isPalindrome(x) {
+    length = 0;
+    n = x;
+    //Counting the number length
+    if(n == 0) length = 1; // special case
+    while(n > 0) {
+        n = n / 10;
+        length++;
+    }
+    //if number length is less than one return false
+    if (length < 1) return false;
+    
+    palindrome = true;
+    //power value calculating via recursion
+    power_value = power_recursion(1, 1, length);
+    
+    //checking palindrome for every digit
+    for(i = 0; i < length / 2; i++){
+        first_value = x / power_value;
+        last_value = x % 10;
+            if(first_value != last_value){
+                palindrome = false;
+                break;
+            }
+            
+            x = (x % power_value) / 10;
+            power_value /= 100;
+        }
+    return palindrome;
+}
+power_recursion(power_value, count, length){
+    if (count == length) return power_value;
+        return power_recursion(power_value * 10, count+1, length);
+}`,
+		description: "Palindrome checker from scratch and Math. Checking the every digit.",
+		complexity: {
+			time_complexity: "-",
+			space_complexity: "-",
+		}
 	},
 ]
 
