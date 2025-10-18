@@ -94,14 +94,14 @@ for (auto char_ : string){
 	},{
 		title: "Palindrome Number checker from scratch",
 		code: `isPalindrome(x) {
+    //negative value return false
+    if(x < 0) return false;
+
     length = 0;
     n = x;
     //Counting the number length
     if(n == 0) length = 1; // special case
-    while(n > 0) {
-        n = n / 10;
-        length++;
-    }
+    else length = length_of_number(0, n);
     //if number length is less than one return false
     if (length < 1) return false;
     
@@ -126,6 +126,11 @@ for (auto char_ : string){
 power_recursion(power_value, count, length){
     if (count == length) return power_value;
         return power_recursion(power_value * 10, count+1, length);
+}
+
+length_of_number(length,n){
+    if (n == 0) return length;
+    return length_of_number(length + 1, n / 10);
 }`,
 		description: "Palindrome checker from scratch and Math. Checking the every digit.",
 		complexity: {
