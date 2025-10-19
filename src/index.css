@@ -1,15 +1,22 @@
 :root {
-  font-family: monospace;
-  background-color: #333;
-  color: #fff;
+	font-family: "Space Mono", monospace;
+	background-color: #333;
+	color: #fff;
+}
+
+@font-face {
+	font-family: "Space Mono";
+	src: url('../fonts/SpaceMono-Regular.ttf') format('truetype');
+	font-weight: noraml;
+	font-style: noraml;
 }
 
 html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
-body{
+body {
 	width: 70%;
 	margin: auto;
 }

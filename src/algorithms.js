@@ -53,7 +53,7 @@ for (auto char_ : string){
 			time_complexity: "o(n)",
 			space_complexity: "o(n)",
 		}
-	},{
+	}, {
 		title: "Binary Search",
 		code: `binary_search(vector<int> vec, int target){
 	left = 0, right = vec.size() - 1;
@@ -73,7 +73,7 @@ for (auto char_ : string){
 			time_complexity: "o(log n)",
 			space_complexity: "o(1)",
 		}
-	},{
+	}, {
 		title: "Binary Search with Recursion",
 		code: `binary_search_recursive(vector<int> vec, int left, int right, int target){
 	if (left > right) return false;
@@ -91,7 +91,7 @@ for (auto char_ : string){
 			time_complexity: "o(log n)",
 			space_complexity: "o(log n)",
 		}
-	},{
+	}, {
 		title: "Palindrome Number checker from scratch",
 		code: `isPalindrome(x) {
     //negative value return false
@@ -99,9 +99,11 @@ for (auto char_ : string){
 
     length = 0;
     n = x;
+
     //Counting the number length
     if(n == 0) length = 1; // special case
     else length = length_of_number(0, n);
+
     //if number length is less than one return false
     if (length < 1) return false;
     
