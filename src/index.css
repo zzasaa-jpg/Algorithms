@@ -6,9 +6,9 @@
 
 @font-face {
 	font-family: "Space Mono";
-	src: url('../Fonts/SpaceMono-Regular.ttf') format('truetype');
-	font-weight: noraml;
-	font-style: noraml;
+	src: url('/Fonts/SpaceMono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 html {
