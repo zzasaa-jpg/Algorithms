@@ -136,8 +136,8 @@ length_of_number(length,n){
 }`,
 		description: "Palindrome checker from scratch and Math. Checking the every digit.",
 		complexity: {
-			time_complexity: "-",
-			space_complexity: "-",
+			time_complexity: "o(n)",
+			space_complexity: "o(1)",
 		}
 	},
 ]
