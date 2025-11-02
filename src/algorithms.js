@@ -139,6 +139,24 @@ length_of_number(length,n){
 			time_complexity: "o(n)",
 			space_complexity: "o(1)",
 		}
+	}, {
+		title: "Reverse Integer",
+		code: `reverse_integer(x) {
+	reverse_digit = 0;
+	
+	while (x != 0) {
+		last_digit = x % 10;
+    	x = x / 10;
+		reverse_digit = reverse_digit * 10 + last_digit;
+		if (reverse_digit > INT_MAX || reverse_digit < INT_MIN) return 0;
+	}
+	return (int)reverse_digit;
+};`,
+		description: "Reverse the integer from Math calculation. First get the last digit; after than remove the that digit from integer. store the last digit add with multiply by 10 and adding the reverse number.",
+		complexity: {
+			time_complexity: "o(n)",
+			space_complexity: "o(1)",
+		}
 	},
 ]
 
