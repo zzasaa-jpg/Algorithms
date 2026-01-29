@@ -94,6 +94,11 @@
 	font-family: "Space Mono", monospace;
 }
 
+#Next_btn:disabled:hover,
+#Previous_btn:disabled:hover{
+	cursor: not-allowed;
+}
+
 span {
 	margin: 0 10px;
 	font-size: 0.8rem;

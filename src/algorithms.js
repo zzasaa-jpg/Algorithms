@@ -157,7 +157,28 @@ length_of_number(length,n){
 			time_complexity: "o(n)",
 			space_complexity: "o(1)",
 		}
-	},
+	},{
+		title: "Triangle",
+		code: `int minimumTotal(vector<vector<int>>& triangle) {
+        int n = triangle.size();
+        for(int i = n - 2; i >= 0; i--)
+        {
+            for (int j = 0; j <=  i; j++)
+            {
+                triangle[i][j] += min(
+                    triangle[i + 1][j],
+                    triangle[i + 1][j + 1]
+                );
+            }
+        }
+        return triangle[0][0];
+}`,
+		description: "This solution uses bottom-up dynamic programming. Starting from the second-last row, each element is updated by adding the minimum of its two children from the row below. This way, every cell stores the minimum path sum from that point to the bottom.",
+		complexity: {
+			time_complexity: "o(n2)",
+			space_complexity: "o(1)",
+		}
+	}
 ]
 
 export default algorithms_obj;
