@@ -178,6 +178,23 @@ length_of_number(length,n){
 			time_complexity: "o(n2)",
 			space_complexity: "o(1)",
 		}
+	},{
+		title: "Sum Of Digits",
+		code: `long long sumOfDigits(long long n) {
+	if(n < 0) return -1;
+    long long right_digit = 0; // Least significant digit
+    while(n > 0)
+    {
+        right_digit += n % 10;
+        n /= 10;
+    }
+    return right_digit;
+}`,
+		description: "This algorithm is math based. LSD(Least Significant Digit) using: n % 10 extracts the least significant digit, and n / 10 removes the least significant digit. No string conversion.",
+		complexity: {
+			time_complexity: "o(d)",
+			space_complexity: "o(1)",
+		}
 	}
 ]
 
