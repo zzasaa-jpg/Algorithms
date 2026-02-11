@@ -20,7 +20,7 @@ for (i = 0; i < half_of_array; i++){
 	if(array[i] > Maximum_value) Maximum_value = array[i];
 	if(array[i] < Minimum_value) Minimum_value = array[i];
 }`,
-		description: "findin the minimum && maximum vlaues.",
+		description: "findin the minimum && maximum values.",
 		complexity: {
 			time_complexity: "o(n)",
 			space_complexity: "o(1)",
@@ -213,7 +213,7 @@ length_of_number(length,n){
         }
     }
 	return -1;
-    }`,
+}`,
 		description: "Two-pass frequency counting using a fixed-size array. First loop count the frequency of each character, second loop find the Unique or Non-Repeating character of index. if condition true return index else return -1.",
 		complexity: {
 			time_complexity: "o(n)",
