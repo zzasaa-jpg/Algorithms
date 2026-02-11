@@ -195,6 +195,30 @@ length_of_number(length,n){
 			time_complexity: "o(d)",
 			space_complexity: "o(1)",
 		}
+	},{
+		title: "First Unique or Non-Repeating Character",
+		code: `int firstUniqChar(string s) {
+    vector<int> freq(26, 0);
+    // Count the frequency of each character
+    for (char ch : s)
+    {
+        freq[ch - 'a']++;
+    }
+    // Find the Unique or Non-Repeating charcter of index
+    for (int i = 0; i < s.size(); i++)
+    {
+        if(freq[s[i] - 'a'] == 1)
+        {
+            return i;
+        }
+    }
+	return -1;
+    }`,
+		description: "Two-pass frequency counting using a fixed-size array. First loop count the frequency of each character, second loop find the Unique or Non-Repeating character of index. if condition true return index else return -1.",
+		complexity: {
+			time_complexity: "o(n)",
+			space_complexity: "o(1)",
+		}
 	}
 ]
 
