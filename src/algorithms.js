@@ -219,6 +219,41 @@ length_of_number(length,n){
 			time_complexity: "o(n)",
 			space_complexity: "o(1)",
 		}
+	},{
+		title: "Log Analyzer",
+		code: `std::string LogAnalyzer::analyze(const std::vector<std::string>& logs) {   
+    if(logs.empty()) return ""; // if logs is empty
+    int INFO_count, WARNING_count, ERROR_count = 0;
+	
+    for(const std::string& log : logs)
+    {
+		size_t colon_pos = log.find(":");
+	
+		// Safety check in case format is invalid
+		if(colon_pos == std::string::npos)
+		{
+			continue;
+		}
+	
+		std::string level =log.substr(0, colon_pos);
+		
+		if(level == "INFO") INFO_count++;
+		else if(level == "WARNING") WARNING_count++;
+		else if(level == "ERROR") ERROR_count++;
+    }
+	
+    std::string results;
+    results += "INFO=" + std::to_string(INFO_count) + "\n";
+    results += "WARNING=" + std::to_string(WARNING_count) + "\n";
+    results += "ERROR=" + std::to_string(ERROR_count) + "\n";
+
+    return results;
+}`,
+		description: "First Checked logs are empty. 3 variables created for state management. Iterate over each log. Find colon_pos for parse before content of colon. String level variable stores all parse content. The states are increament according to conditions. After loop. Results variable append steps using to_string method. Final results are returned.",
+		complexity: {
+			time_complexity: "o(n)",
+			space_complexity: "o(1)",
+		}
 	}
 ]
 
