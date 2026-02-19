@@ -243,9 +243,9 @@ length_of_number(length,n){
     }
 	
     std::string results;
-    results += "INFO=" + std::to_string(INFO_count) + "\n";
-    results += "WARNING=" + std::to_string(WARNING_count) + "\n";
-    results += "ERROR=" + std::to_string(ERROR_count) + "\n";
+    results += "INFO=" + std::to_string(INFO_count) + "/n";
+    results += "WARNING=" + std::to_string(WARNING_count) + "/n";
+    results += "ERROR=" + std::to_string(ERROR_count) + "/n";
 
     return results;
 }`,
